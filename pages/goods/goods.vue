@@ -59,8 +59,6 @@
 		text-align: center;
 		color: #424242;
 		font-size: 30rpx;
-		height: 50rpx;
-		line-height: 50rpx;
-		margin-bottom: 30rpx;
+		padding-bottom:20rpx ;
 	}
 </style>
