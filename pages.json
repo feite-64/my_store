@@ -27,7 +27,8 @@
 			"path": "pages/goods/goods",
 			"style": {
 				"navigationBarTitleText": "商城列表",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 100
 			}
 		}, {
 			"path": "pages/videos/videos",
@@ -39,7 +40,7 @@
 			"path": "pages/pics/pics",
 			"style": {
 				"navigationBarTitleText": "社区图片",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": false
 			}
 		}, {
 			"path": "pages/contact/contact",
