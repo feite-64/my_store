@@ -1,0 +1,86 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		}, {
+			"path": "pages/news/news",
+			"style": {
+				"navigationBarTitleText": "新闻",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/cart/cart",
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "用户",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/goods/goods",
+			"style": {
+				"navigationBarTitleText": "商城列表",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/videos/videos",
+			"style": {
+				"navigationBarTitleText": "学习视频",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/pics/pics",
+			"style": {
+				"navigationBarTitleText": "社区图片",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/contact/contact",
+			"style": {
+				"navigationBarTitleText": "联系我们",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "商城App",
+		"navigationBarBackgroundColor": "#c41e00",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"backgroundColor": "#eaeaea",
+		"list": [{
+			"text": "首页",
+			"pagePath": "pages/index/index",
+			"iconPath": "static/tabbar/home.png",
+			"selectedIconPath": "static/tabbar/home-active.png"
+
+		}, {
+			"text": "资讯",
+			"pagePath": "pages/news/news",
+			"iconPath": "static/tabbar/news.png",
+			"selectedIconPath": "static/tabbar/news-active.png"
+		}, {
+			"text": "购物车",
+			"pagePath": "pages/cart/cart",
+			"iconPath": "static/tabbar/cart.png",
+			"selectedIconPath": "static/tabbar/cart-active.png"
+		}, {
+			"text": "会员",
+			"pagePath": "pages/user/user",
+			"iconPath": "static/tabbar/user.png",
+			"selectedIconPath": "static/tabbar/user-active.png"
+		}],
+		"color": "#000",
+		"selectedColor": "#c41e00"
+	},
+	"uniIdRouter": {}
+}
