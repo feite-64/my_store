@@ -12,11 +12,10 @@ export const useShopStore = defineStore('shop', {
 	},
 	actions: {
 		// 获取商品数据
-		async getShopParcel(callBack: () => void) {
+		async getShopParcel() {
 			await getShopData().then((res: any) => {
 				this.shopData = res.data
 			})
-			callBack && callBack()
 		},
 		// 触底加载新数据 正常通过getShopData(index)实现动态获取接口数据,此处只是模拟
 		async getNewsSgop(index: number) {

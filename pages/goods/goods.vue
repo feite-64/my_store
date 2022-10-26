@@ -24,11 +24,9 @@
 	// 请求后端接口页数 此处只是模拟
 	const index = ref < number > (1)
 	const store = useShopStore()
-	const callBack = () => {
-		uni.stopPullDownRefresh()
-	}
+
 	onLoad(() => {
-		store.getShopParcel(callBack)
+		store.getShopParcel()
 	})
 	// 触底函数
 	onReachBottom(() => {
@@ -44,8 +42,8 @@
 		index.value = 1
 		store.shopData = []
 		setTimeout(() => {
-			store.getShopParcel(callBack)
-
+			store.getShopParcel()
+			uni.stopPullDownRefresh()
 		}, 500)
 	})
 </script>
@@ -59,6 +57,6 @@
 		text-align: center;
 		color: #424242;
 		font-size: 30rpx;
-		padding-bottom:20rpx ;
+		padding-bottom: 20rpx;
 	}
 </style>
