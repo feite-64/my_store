@@ -9,22 +9,57 @@
 					{{item.title}}
 				</view>
 				<view class="news_item_right_info">
-					<text>发表时间：{{item.add_time.slice(0,10)}}</text>
-					<text>浏览：{{item.click}}次</text>
+					<text>发表时间: {{ getFilter(item.add_time)}}</text>
+					<text>浏览: {{item.click}}次</text>
 				</view>
 			</view>
+		</view>
+		<view class="reachBottom" v-if="store.flag">
+			-------我是有底线的-------
 		</view>
 	</view>
 </template>
 
 <script setup lang='ts'>
 	import {
-		onLoad
+		onLoad,
+		onPullDownRefresh,
+		onReachBottom
 	} from '@dcloudio/uni-app';
+	import {
+		computed
+	} from "vue";
 	import {
 		useNewsStore
 	} from '../../store/newsStore';
 	const store = useNewsStore()
+	const getFilter = computed(() => {
+		return function(data: string) {
+			const newDate = new Date(data)
+			const newYear = newDate.getFullYear().toString().padStart(2, '0')
+			const newMouth = newDate.getMonth().toString().padStart(2, '0')
+			const newDay = newDate.getDate()
+			return `${newYear}-${newMouth}-${newDay}`
+		}
+	})
+	// 下拉刷新
+	onPullDownRefresh(() => {
+		store.newsListData = []
+		store.flag = false
+		store.index = 1
+		setTimeout(() => {
+			store.getNewsListData()
+			uni.stopPullDownRefresh()
+		}, 500)
+	})
+	// 触底加载
+	onReachBottom(() => {
+		store.index++
+		if (store.index > 4) {
+			return store.flag = true
+		}
+		store.getPullData()
+	})
 	onLoad(() => {
 		store.getNewsListData()
 	})
@@ -56,11 +91,19 @@
 					padding: 0 20rpx 10rpx 0;
 					font-size: 28rpx;
 					color: #333333;
-					text:nth-child(2){
-						margin-left: 30rpx;
+
+					text:nth-child(2) {
+						margin-left: 20rpx;
 					}
 				}
 			}
+		}
+
+		.reachBottom {
+			text-align: center;
+			color: #424242;
+			font-size: 30rpx;
+			padding-bottom: 20rpx;
 		}
 	}
 </style>
