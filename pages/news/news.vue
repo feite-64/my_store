@@ -1,6 +1,6 @@
 <template>
 	<view class="news">
-		<view class="news_item" v-for="item in store.newsListData" :key="item.id">
+		<view @click="detailClick(item.id)" class="news_item" v-for="item in store.newsListData" :key="item.id">
 			<view class="news_item_left">
 				<image :src="item.img_url" mode="aspectFit"></image>
 			</view>
@@ -9,7 +9,7 @@
 					{{item.title}}
 				</view>
 				<view class="news_item_right_info">
-					<text>发表时间: {{ getFilter(item.add_time)}}</text>
+					<text>发表时间: {{ store.getFilter(item.add_time)}}</text>
 					<text>浏览: {{item.click}}次</text>
 				</view>
 			</view>
@@ -27,21 +27,16 @@
 		onReachBottom
 	} from '@dcloudio/uni-app';
 	import {
-		computed
-	} from "vue";
-	import {
 		useNewsStore
 	} from '../../store/newsStore';
 	const store = useNewsStore()
-	const getFilter = computed(() => {
-		return function(data: string) {
-			const newDate = new Date(data)
-			const newYear = newDate.getFullYear().toString().padStart(2, '0')
-			const newMouth = newDate.getMonth().toString().padStart(2, '0')
-			const newDay = newDate.getDate()
-			return `${newYear}-${newMouth}-${newDay}`
-		}
-	})
+	// 点击跳转到详情页
+	const detailClick = (id: number) => {
+		uni.navigateTo({
+			url: `/pages/new_details/new_details?id=${id}`
+		})
+	}
+
 	// 下拉刷新
 	onPullDownRefresh(() => {
 		store.newsListData = []

@@ -6,11 +6,21 @@ export const useNewsStore = defineStore('news', {
 		return {
 			newsListData: <newsListType[]>[],
 			index: <number>1,
-			flag: <boolean>false
+			flag: <boolean>false,
+			newsDetailsData: <newsListType>{}
 		}
 	},
 	getters: {
-
+		// 过滤日期格式
+		getFilter: () => {
+			return function(data: string) {
+				const newDate = new Date(data)
+				const newYear = newDate.getFullYear().toString().padStart(2, '0')
+				const newMouth = newDate.getMonth().toString().padStart(2, '0')
+				const newDay = newDate.getDate()
+				return `${newYear}-${newMouth}-${newDay}`
+			}
+		}
 	},
 	actions: {
 		// 获取资讯列表

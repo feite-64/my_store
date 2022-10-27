@@ -48,6 +48,13 @@
 				"navigationBarTitleText": "联系我们",
 				"enablePullDownRefresh": false
 			}
+		}, {
+			"path": "pages/new_details/new_details",
+			"style": {
+				"navigationBarTitleText": "资讯详情",
+				"enablePullDownRefresh": false
+			}
+
 		}
 	],
 	"globalStyle": {
