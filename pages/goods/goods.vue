@@ -26,7 +26,7 @@
 	const store = useShopStore()
 
 	onLoad(() => {
-		store.getShopParcel()
+		store.getShopListData()
 	})
 	// 触底函数
 	onReachBottom(() => {
@@ -42,7 +42,7 @@
 		index.value = 1
 		store.shopData = []
 		setTimeout(() => {
-			store.getShopParcel()
+			store.getShopListData()
 			uni.stopPullDownRefresh()
 		}, 500)
 	})

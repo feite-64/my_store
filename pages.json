@@ -56,7 +56,16 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/shop_details/shop_details",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "商品详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "商城App",

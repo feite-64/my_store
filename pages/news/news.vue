@@ -10,7 +10,7 @@
 				</view>
 				<view class="news_item_right_info">
 					<text>发表时间: {{ store.getFilter(item.add_time)}}</text>
-					<text>浏览: {{item.click}}次</text>
+					<text>浏览: {{item.click}}</text>
 				</view>
 			</view>
 		</view>
@@ -81,6 +81,15 @@
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
+
+				&_title {
+					padding: 20rpx 10rpx 0 0;
+					font-size: 34rpx;
+					width: 500rpx;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
 
 				&_info {
 					padding: 0 20rpx 10rpx 0;

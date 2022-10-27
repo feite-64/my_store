@@ -5,14 +5,24 @@ export const useShopStore = defineStore('shop', {
 	state() {
 		return {
 			shopData: <shopType[]>[],
+			shopDetailsData: <shopType>{}
 		}
 	},
 	getters: {
-
+		// 过滤日期格式
+		getFilter: () => {
+			return function(data: string) {
+				const newDate = new Date(data)
+				const newYear = newDate.getFullYear().toString().padStart(2, '0')
+				const newMouth = newDate.getMonth().toString().padStart(2, '0')
+				const newDay = newDate.getDate()
+				return `${newYear}-${newMouth}-${newDay}`
+			}
+		}
 	},
 	actions: {
 		// 获取商品数据
-		async getShopParcel() {
+		async getShopListData() {
 			await getShopData().then((res: any) => {
 				this.shopData = res.data
 			})

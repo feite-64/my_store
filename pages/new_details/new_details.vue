@@ -23,7 +23,6 @@
 	onLoad((data) => {
 		// 根据传参筛选符合条件的数据渲染
 		store.newsDetailsData = store.newsListData.find(item => item.id === parseInt(data.id))
-		store.getNewsListData()
 	})
 </script>
 

@@ -92,7 +92,7 @@
 	onLoad(() => {
 		getSwiperParcel()
 		// 获取商品列表数据
-		store.getShopParcel()
+		store.getShopListData()
 	})
 </script>
 

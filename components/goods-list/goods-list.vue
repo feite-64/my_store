@@ -1,6 +1,6 @@
 <template>
 	<view class="hot-shop_list">
-		<view v-for="item in store.shopData" :key="item.id" class="hot-shop_list_item">
+		<view @click="shopDetailClick(item.id)" v-for="item in store.shopData" :key="item.id" class="hot-shop_list_item">
 			<image :src="item.img_url"></image>
 			<view class="hot-shop_list_item-price">
 				<text>￥{{item.sell_price}}</text>
@@ -17,6 +17,11 @@
 	import {
 		useShopStore
 	} from '../../store/shopStore';
+	const shopDetailClick=(id:number)=>{
+		uni.navigateTo({
+			url:`/pages/shop_details/shop_details?id=${id}`
+		})
+	}
 	const store = useShopStore()
 </script>
 

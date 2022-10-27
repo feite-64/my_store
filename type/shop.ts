@@ -1,6 +1,6 @@
 export interface shopType {
 	id: number
-	add_item: string
+	add_time: string
 	title: string
 	zhaiyao: string
 	click: number
