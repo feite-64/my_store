@@ -8,7 +8,7 @@
 		</scroll-view>
 		<scroll-view :style="{height:winHeight+'rpx'}" class="pics_right" scroll-y enable-flex>
 			<view class="pics_right_item" v-for="item in store.imageData" :key="item.id">
-				<image :src="item.src" mode=""></image>
+				<image @click="previewClick(item.src)" :src="item.src" mode=""></image>
 				<text>{{item.alt}}</text>
 			</view>
 			<text class="pics_right_text" v-if="store.imageData.length===0">暂无数据</text>
@@ -31,11 +31,16 @@
 	const winHeight = ref()
 	const store = usePicsStore()
 	// 根据手机自适应高度
-
 	const titleClick = (id: number) => {
 		store.active = id
 		// 动态获取图片展示
 		store.getPicsImageData()
+	}
+	const previewClick = (current: string) => {
+		uni.previewImage({
+			urls: store.imageData.map(item => item.src),
+			current: current
+		})
 	}
 	onLoad(() => {
 		// 首次加载数据
