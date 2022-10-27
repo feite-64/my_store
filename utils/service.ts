@@ -13,6 +13,7 @@ export const getShopData = () => {
 		method: "GET"
 	})
 }
+// 动态获取商品数据 暂无商品
 // export const getGoodsData = (index: string) => {
 // 	return service({
 // 		url: `/shop/${index}`,
@@ -27,9 +28,16 @@ export const getPicsTitle = () => {
 	})
 }
 // 动态获取图片
-export const getPicsImage = (id:number) => {
+export const getPicsImage = (id: number) => {
 	return service({
 		url: `/image/${id}`,
+		method: "GET"
+	})
+}
+// 获取资讯列表数据
+export const getNewsList = () => {
+	return service({
+		url: `/news`,
 		method: "GET"
 	})
 }
