@@ -19,7 +19,7 @@
 	} from '../../store/shopStore';
 	const shopDetailClick=(id:number)=>{
 		uni.navigateTo({
-			url:`/pages/shop_details/shop_details?id=${id}`
+			url:`/pages/goods_details/goods_details?id=${id}`
 		})
 	}
 	const store = useShopStore()

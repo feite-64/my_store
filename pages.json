@@ -55,12 +55,29 @@
 				"enablePullDownRefresh": false
 			}
 
+		}, {
+			"path": "pages/goods_details/goods_details",
+			"style": {
+				"navigationBarTitleText": "商品详情",
+				"enablePullDownRefresh": false
+			}
+
 		}
 	    ,{
             "path" : "pages/shop_details/shop_details",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "商品详情",
+                "navigationBarTitleText": "店铺详情
+                ",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/CSP/CSP",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "人工客服",
                 "enablePullDownRefresh": false
             }
             

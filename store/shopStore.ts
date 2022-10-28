@@ -5,7 +5,22 @@ export const useShopStore = defineStore('shop', {
 	state() {
 		return {
 			shopData: <shopType[]>[],
-			shopDetailsData: <shopType>{}
+			shopDetailsData: <shopType>{},
+			shopNavsData: [
+				{
+					icon: 'iconfont icon-kefu',
+					title: '客服',
+					path: '/pages/CSP/CSP'
+				}, {
+					icon: 'iconfont icon-shop',
+					title: '店铺',
+					path: '/pages/shop_details/shop_details'
+				}, {
+					icon: 'iconfont icon-gouwuche',
+					title: '购物车',
+					path: '/pages/cart/cart'
+				}
+			]
 		}
 	},
 	getters: {

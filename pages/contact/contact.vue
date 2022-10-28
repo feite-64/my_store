@@ -13,7 +13,7 @@
 			</view>
 		</view>
 		<view class="contact_map">
-			<map :latitude="data.latitude" :scale="data.scale" :longitude="data.longitude" :markers="data.coves"></map>
+			<map :key="data.id" :latitude="data.latitude" :scale="data.scale" :longitude="data.longitude" :markers="data.coves"></map>
 			<!-- <map name=""></map> -->
 		</view>
 	</view>
@@ -25,6 +25,7 @@
 	} from "vue";
 	// 地址
 	const data = reactive({
+		id:1,
 		latitude: 34.272011,
 		longitude: 117.312622,
 		scale: 12,
