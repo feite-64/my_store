@@ -1,7 +1,7 @@
 <template>
 
 	<view class="shop_details">
-		
+
 	</view>
 
 </template>

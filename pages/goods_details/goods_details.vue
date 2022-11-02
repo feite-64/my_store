@@ -107,6 +107,7 @@
 		}
 
 		&_flxed {
+			height: 100rpx;
 			padding: 6rpx 20rpx;
 			position: fixed;
 			bottom: 0;
@@ -148,23 +149,23 @@
 
 				&_addToCart {
 					width: 160rpx;
-					height: 70rpx;
-					line-height: 70rpx;
-					font-size: 26rpx;
+					height: 80rpx;
+					line-height: 80rpx;
+					font-size: 28rpx;
 					text-align: center;
 					padding: 0 10rpx;
 					background-color: red;
-					border-radius: 35rpx 0 0 35rpx;
+					border-radius: 40rpx 0 0 40rpx;
 				}
 
 				&_buyNow {
 					width: 160rpx;
-					height: 70rpx;
-					line-height: 70rpx;
-					font-size: 26rpx;
+					height: 80rpx;
+					line-height: 80rpx;
+					font-size: 28rpx;
 					text-align: center;
 					padding: 0 10rpx;
-					border-radius: 0 35rpx 35rpx 0;
+					border-radius: 0 40rpx 40rpx 0;
 					background-color: orange;
 				}
 

@@ -67,8 +67,7 @@
             "path" : "pages/shop_details/shop_details",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "店铺详情
-                ",
+                "navigationBarTitleText": "店铺详情",
                 "enablePullDownRefresh": false
             }
             

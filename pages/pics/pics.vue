@@ -54,7 +54,6 @@
 				winHeight.value = res.windowHeight * 2
 			},
 		});
-
 	})
 </script>
 

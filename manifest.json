@@ -5,6 +5,19 @@
     "versionName" : "1.0.0",
     "versionCode" : "100",
     "transformPx" : false,
+    "deServer" : {
+        "proxy" : {
+            "/fonts" : {
+                "target" : "https://github.com/feite-64/iconfont.git/fonts",
+                "changeOrigin" : true,
+                "secure" : false,
+                "pathRewrite" : {
+                    "^/test" : "/"
+                }
+            }
+        },
+        "port" : 8080
+    },
     /* 5+App特有相关 */
     "app-plus" : {
         "usingComponents" : true,
@@ -50,10 +63,11 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wxe27490dd3bfce7bb",
+        "appid" : "wx212486435923bade",
         "setting" : {
             "urlCheck" : false,
-            "minified" : true
+            "minified" : true,
+            "postcss" : false
         },
         "usingComponents" : true
     },
@@ -77,6 +91,22 @@
                     "key" : "2MQBZ-4ZQ35-JX3IK-Q26VV-XWUJE-T7BZ2"
                 }
             }
+        },
+        "router" : {
+            "mode" : "history",
+            "base" : "./"
+        },
+        "devServer" : {
+            "https" : false
+        },
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : true
+            }
         }
-    }
+    },
+    "locale" : "zh-Hans",
+    "fallbackLocale" : "zh-Hans"
 }
+/* 5+App特有相关 */
+
