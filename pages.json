@@ -21,7 +21,9 @@
 			"path": "pages/user/user",
 			"style": {
 				"navigationBarTitleText": "用户",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": false,
+				"backgroundColor": "#e0e0e0",
+				"disableScroll": true
 			}
 		}, {
 			"path": "pages/goods/goods",
@@ -62,26 +64,22 @@
 				"enablePullDownRefresh": false
 			}
 
+		}, {
+			"path": "pages/shop_details/shop_details",
+			"style": {
+				"navigationBarTitleText": "店铺详情",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/CSP/CSP",
+			"style": {
+				"navigationBarTitleText": "人工客服",
+				"enablePullDownRefresh": false
+			}
+
 		}
-	    ,{
-            "path" : "pages/shop_details/shop_details",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "店铺详情",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/CSP/CSP",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "人工客服",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "商城App",

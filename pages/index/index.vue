@@ -54,7 +54,7 @@
 		swiperData: [],
 		navs: [{
 				icon: 'iconfont icon-shop',
-				title: '黑马超市',
+				title: '商品列表',
 				path: '/pages/goods/goods'
 			}, {
 				icon: 'iconfont icon-contact',
