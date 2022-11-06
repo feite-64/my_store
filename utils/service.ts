@@ -41,3 +41,10 @@ export const getNewsList = () => {
 		method: "GET"
 	})
 }
+// 获取购物车数据
+export const getCartList = () => {
+	return service({
+		url: `/cart`,
+		method: "GET"
+	})
+}

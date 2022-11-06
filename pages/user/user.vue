@@ -7,20 +7,9 @@
 				<text>feite</text>
 			</view>
 			<view class="user_list">
-				<view class="user_list_item">
-					<text>设置</text>
-				</view>
-				<view class="user_list_item">
-					<text>设置</text>
-				</view>
-				<view class="user_list_item">
-					<text>设置</text>
-				</view>
-				<view class="user_list_item">
-					<text>设置</text>
-				</view>
-				<view class="user_list_item">
-					<text>设置</text>
+				<view class="user_list_item" v-for="item in data" :key="item.title" @click="userListClick(item.path)">
+					<text :class="item.icon"></text>
+					<text>{{item.title}}</text>
 				</view>
 			</view>
 		</view>
@@ -33,9 +22,39 @@
 		onReady
 	} from '@dcloudio/uni-app';
 	import {
+		reactive,
 		ref
 	} from "vue";
+	const data = reactive([{
+			title: '商店',
+			path: '/pages/goods/goods',
+			icon: 'iconfont icon-shop'
+		},
+		{
+			icon: 'iconfont icon-contact',
+			title: '联系我们',
+			path: '/pages/contact/contact'
+		}, {
+			icon: 'iconfont icon-i-img',
+			title: '社区图片',
+			path: '/pages/pics/pics'
+		},
+		{
+			icon: 'iconfont icon-video_light',
+			title: '学习视频',
+			path: '/pages/videos/videos'
+		}, {
+			icon: 'iconfont icon-video_light',
+			title: '设置',
+			path: '/pages/setting/setting'
+		}
+	])
 	const winHeight = ref()
+	const userListClick = (url: string) => {
+		uni.navigateTo({
+			url,
+		})
+	}
 	onReady(() => {
 		uni.getSystemInfo({
 			success: function(res) {
@@ -92,6 +111,9 @@
 				line-height: 100rpx;
 				padding-left: 60rpx;
 
+				text {
+					padding-right: 20rpx;
+				}
 			}
 		}
 	}

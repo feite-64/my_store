@@ -1,5 +1,9 @@
 <template>
-	<view></view>
+	<view class="video">
+		<view class="">
+			<video :src="data.video" controls></video>
+		</view>
+	</view>
 </template>
 
 <script setup lang='ts'>
