@@ -20,9 +20,7 @@ export const useGoodsStore = defineStore('goods', {
 	state() {
 		return {
 			data: <data[]>[
-			],
-			// 计算总价
-			totalPrice: <number>0
+			]
 		}
 	},
 	getters: {
@@ -32,7 +30,6 @@ export const useGoodsStore = defineStore('goods', {
 		async getCartData() {
 			await getCartList().then((res: any) => {
 				this.data = res.data
-				console.log(this.data);
 			})
 		},
 		deleteData(idList: number[]) {
