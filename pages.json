@@ -36,7 +36,7 @@
 			"path": "pages/videos/videos",
 			"style": {
 				"navigationBarTitleText": "学习视频",
-				"enablePullDownRefresh": true
+				"enablePullDownRefresh": false
 			}
 		}, {
 			"path": "pages/pics/pics",

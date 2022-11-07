@@ -1,7 +1,9 @@
 <template>
 	<view class="shop-card">
 		<shopCard @delect="delect" @accounts="accounts">
-			<text>插槽</text>
+			<text>
+				-------我是有底线的-------
+			</text>
 		</shopCard>
 		<image src="" mode=""></image>
 	</view>
